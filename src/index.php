@@ -18,7 +18,7 @@ $router = new \Bramus\Router\Router();
 
 // Define routes
 $router->get('/', function () use ($request) {
-    $request->setUrl('http://localhost/api/authors');
+    $request->setUrl('http://app/api/authors');
     $request->setMethod(HTTP_Request2::METHOD_GET);
 
     try {
@@ -38,7 +38,7 @@ $router->get('/', function () use ($request) {
 
 $router->get('/create-author', function () use ($request, $faker) {
     $request->setMethod(HTTP_Request2::METHOD_POST);
-    $request->setUrl('http://localhost/api/authors');
+    $request->setUrl('http://app/api/authors');
     $request->addPostParameter(array(
         'name' => $faker->name(),
         'email' => $faker->email(),
