@@ -24,7 +24,7 @@ $router->get('/', function () use ($request) {
     try {
         $response = $request->send();
         if ($response->getStatus() == 200) {
-            echo $response->getBody();
+            echo '<pre>' . $response->getBody() . '</pre>';
         }
         else {
             echo 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .
@@ -50,7 +50,7 @@ $router->get('/create-author', function () use ($request, $faker) {
     try {
         $response = $request->send();
         if ($response->getStatus() == 200 || $response->getStatus() === 201) {
-            echo $response->getBody();
+            echo '<pre>' . $response->getBody() . '</pre>';
         }
         else {
             echo 'Unexpected HTTP status: ' . $response->getStatus() . ' ' .
