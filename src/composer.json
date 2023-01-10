@@ -1,0 +1,17 @@
+{
+  "name": "vendor_name/frontend-vanilla",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "aminalalialdarwish",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "pear/http_request2": "^2.5",
+    "bramus/router": "^1.6",
+    "fakerphp/faker": "^1.21"
+  }
+}
